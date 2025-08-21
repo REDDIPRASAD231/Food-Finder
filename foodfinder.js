@@ -354,6 +354,7 @@ function displayMealDetails(meal) {
     }
     
     // Set measures
+    
     const measuresList = document.getElementById('measuresList');
     measuresList.innerHTML = '';
     
@@ -372,6 +373,7 @@ function displayMealDetails(meal) {
     }
     
     // Set instructions
+    
     const instructionsList = document.getElementById('instructionsList');
     instructionsList.innerHTML = '';
     
@@ -392,6 +394,7 @@ function displayMealDetails(meal) {
 }
 
 // Render Functions
+
 function renderCategories() {
     categoriesGrid.innerHTML = '';
     categories.forEach(category => {
