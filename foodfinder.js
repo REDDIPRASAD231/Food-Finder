@@ -4,12 +4,15 @@ const CATEGORIES_API = `${API_BASE}/categories.php`;
 const SEARCH_API = `${API_BASE}/search.php?s=`;
 const FILTER_BY_CATEGORY_API = `${API_BASE}/filter.php?c=`;
 const MEAL_DETAILS_API = `${API_BASE}/lookup.php?i=`;
+
 // Data
+
 let categories = [];
 let recipes = [];
 let allMeals = [];
 
 // DOM Elements
+
 const menuToggle = document.getElementById('menuToggle');
 const sideMenu = document.getElementById('sideMenu');
 const overlay = document.getElementById('overlay');
@@ -30,13 +33,17 @@ const breadcrumbNav = document.getElementById('breadcrumbNav');
 const breadcrumbText = document.getElementById('breadcrumbText');
 const mealDetailsSection = document.getElementById('mealDetailsSection');
 const tagsContainer = document.getElementById('mealTagsContainer');
+
 // State
+
 let isMenuOpen = false;
 let currentSearchResults = [];
 let selectedCategory = '';
 let currentCategoryData = null;
 let currentView = 'home'; 
+
 // API Functions
+
 async function fetchCategories() {
     try {
         const response = await fetch(CATEGORIES_API);
@@ -105,12 +112,14 @@ async function fetchMealDetails(mealId) {
 }
 
 // Initialize
+
 document.addEventListener('DOMContentLoaded', function() {
     fetchCategories();
     setupEventListeners();
 });
 
 // Event Listeners
+
 function setupEventListeners() {
     menuToggle.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', closeMenu);
@@ -122,13 +131,16 @@ function setupEventListeners() {
     });
     
     // Close menu on escape key
+    
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && isMenuOpen) {
             closeMenu();
         }
     });
 }
+
 // Navigation Functions
+
 function goHome() {
     searchInput.value = '';
     currentView = 'home';
@@ -168,6 +180,7 @@ function updateViewDisplay() {
             break;
     }
 }
+
 // Menu Functions
 
 function toggleMenu() {
@@ -272,12 +285,15 @@ async function showMealDetails(mealId) {
 }
 
 function displayMealDetails(meal) {
+    
     // Set basic info
+    
     document.getElementById('mealDetailTitle').textContent = meal.strMeal;
     document.getElementById('mealDetailImage').src = meal.strMealThumb;
     document.getElementById('mealCategory').textContent = meal.strCategory.toUpperCase();
     
     // Set source
+    
     if (meal.strSource) {
         document.getElementById('mealSource').href = meal.strSource;
         document.getElementById('mealSource').textContent = meal.strSource;
@@ -287,6 +303,7 @@ function displayMealDetails(meal) {
     }
     
     // Set tags
+    
     const tagsContainer = document.getElementById('mealTagsContainer');
     tagsContainer.innerHTML = ''; 
     if (meal.strTags) {
@@ -306,6 +323,7 @@ function displayMealDetails(meal) {
 }
     
     // Set ingredients
+    
     const ingredientsList = document.getElementById('ingredientsList');
     ingredientsList.innerHTML = '';
     
@@ -317,6 +335,7 @@ function displayMealDetails(meal) {
             ingredientItem.className = 'ingredient-item';
             
             // Create the number element
+            
             const ingredientNumber = document.createElement('div');
             ingredientNumber.className = 'ingredient-number';
             ingredientNumber.textContent = ingredientCount;
