@@ -4,14 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Poppins", sans-serif;
     background-color: #ffffff;
     color: #3d2e1f;
     min-height: 100vh;
 }
-
 /* Header */
 .header {
     background-color: #de5f04;
@@ -19,36 +17,30 @@ body {
     position: relative;
     z-index: 50;
 }
-
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-left: 10px;
 }
-
 .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
 }
-
 .logo :hover{
      background-color: rgba(255, 255, 255, 0.2);
 }
-
 .logo-icon {
     color: white;
     font-size: 1.5rem;
 }
-
 .logo h1 {
     color: white;
     font-size: 1.25rem;
     font-weight: bold;
 }
-
 .menu-toggle {
     background: none;
     border: none;
@@ -86,7 +78,6 @@ body {
 }
 
 /* Side Menu */
-
 .side-menu {
     position: fixed;
     top: 0;
@@ -122,7 +113,6 @@ body {
     overflow-y: auto;
     padding-right: 10px;
 }
-
 .menu-categories hr{
     opacity: 0.3;
 }
@@ -164,7 +154,6 @@ body {
 .menu-categories button:hover {
     color: #b45309;
 }
-
 /* Overlay */
 .overlay {
     position: fixed;
@@ -179,9 +168,7 @@ body {
     opacity: 1;
     visibility: visible;
 }
-
 /* Hero Section */
-
 .hero-section {
     position: relative;
     height: 400px;
@@ -232,7 +219,6 @@ body {
     font-size: 1rem;
     margin-left: 12px;
 }
-
 .search-button:hover {
     background-color: white;
     color:#de5f04 ;
