@@ -10,7 +10,9 @@ body {
     color: #3d2e1f;
     min-height: 100vh;
 }
+
 /* Header */
+
 .header {
     background-color: #de5f04;
     padding: 1rem;
@@ -82,6 +84,7 @@ body {
 }
 
 /* Side Menu */
+
 .side-menu {
     position: fixed;
     top: 0;
