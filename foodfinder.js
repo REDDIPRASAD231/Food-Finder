@@ -4,7 +4,6 @@ const CATEGORIES_API = `${API_BASE}/categories.php`;
 const SEARCH_API = `${API_BASE}/search.php?s=`;
 const FILTER_BY_CATEGORY_API = `${API_BASE}/filter.php?c=`;
 const MEAL_DETAILS_API = `${API_BASE}/lookup.php?i=`;
-
 // Data
 let categories = [];
 let recipes = [];
@@ -31,14 +30,12 @@ const breadcrumbNav = document.getElementById('breadcrumbNav');
 const breadcrumbText = document.getElementById('breadcrumbText');
 const mealDetailsSection = document.getElementById('mealDetailsSection');
 const tagsContainer = document.getElementById('mealTagsContainer');
-
 // State
 let isMenuOpen = false;
 let currentSearchResults = [];
 let selectedCategory = '';
 let currentCategoryData = null;
 let currentView = 'home'; 
-
 // API Functions
 async function fetchCategories() {
     try {
@@ -56,7 +53,6 @@ async function fetchCategories() {
         console.error('Error fetching categories:', error);
     }
 }
-
 async function searchMeals(query) {
     try {
         const response = await fetch(SEARCH_API + encodeURIComponent(query));
@@ -97,7 +93,6 @@ async function fetchMealsByCategory(category) {
     }
 }
 
-
 async function fetchMealDetails(mealId) {
     try {
         const response = await fetch(MEAL_DETAILS_API + mealId);
@@ -133,7 +128,6 @@ function setupEventListeners() {
         }
     });
 }
-
 // Navigation Functions
 function goHome() {
     searchInput.value = '';
@@ -143,7 +137,6 @@ function goHome() {
     selectedCategory = '';
     currentCategoryData = null;
 }
-
 function updateViewDisplay() {
     searchResults.style.display = 'none';
     categoriesSection.style.display = 'none';
@@ -175,7 +168,6 @@ function updateViewDisplay() {
             break;
     }
 }
-
 // Menu Functions
 
 function toggleMenu() {
