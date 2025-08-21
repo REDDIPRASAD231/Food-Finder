@@ -50,12 +50,10 @@ body {
     margin-right: 10px;
     transition: background-color 0.3s;
 }
-
 .menu-toggle:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 }
-
 .hamburger {
     display: block;
     width: 20px;
@@ -64,19 +62,15 @@ body {
     margin: 4px 0;
     transition: 0.3s;
 }
-
 .menu-toggle.active .hamburger:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
 }
-
 .menu-toggle.active .hamburger:nth-child(2) {
     opacity: 0;
 }
-
 .menu-toggle.active .hamburger:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
 }
-
 /* Side Menu */
 .side-menu {
     position: fixed;
@@ -90,11 +84,9 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 40;
 }
-
 .side-menu.open {
     transform: translateX(0);
 }
-
 .menu-content {
     padding: 1rem;
     padding-top: 5rem;
@@ -103,7 +95,6 @@ body {
     flex-direction: column;
     overflow-y: auto;
 }
-
 .menu-categories {
     display: flex;
     flex-grow: 1;
@@ -120,21 +111,17 @@ body {
 .menu-categories::-webkit-scrollbar {
     width: 6px;
 }
-
 .menu-categories::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 3px;
 }
-
 .menu-categories::-webkit-scrollbar-thumb {
     background: #d97706;
     border-radius: 3px;
 }
-
 .menu-categories::-webkit-scrollbar-thumb:hover {
     background: #b45309;
 }
-
 .menu-categories button {
     display: block;
     width: 100%;
@@ -150,7 +137,6 @@ body {
     font-size: 1rem;
     flex-shrink: 0;
 }
-
 .menu-categories button:hover {
     color: #b45309;
 }
@@ -163,12 +149,13 @@ body {
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
 }
-
 .overlay.active {
     opacity: 1;
     visibility: visible;
 }
+
 /* Hero Section */
+
 .hero-section {
     position: relative;
     height: 400px;
